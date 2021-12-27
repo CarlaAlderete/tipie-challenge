@@ -28,18 +28,15 @@ const Home = ()=>{
     })
 
     const sortHandler = (params)=>{
-        let auxData = [...data]
         if(action[params] === 'asc'){
             setAction({...action, [params]:'des'})
-            auxData.sort((a,b)=>{return a[params].localeCompare(b[params])})
-            setData(auxData)
+            data.sort((a,b)=>{return a[params].localeCompare(b[params])})
         }else if(action[params] === 'des'){
             setAction({...action, [params]:'none'})
-            auxData.sort((a,b)=>{return b[params].localeCompare(a[params])})
-            setData(auxData)
+            data.sort((a,b)=>{return b[params].localeCompare(a[params])})
         }else{
             setAction({...action, [params]:'asc'})
-            setData(dataCopie)
+            setData([...dataCopie])
         }   
     }
 
