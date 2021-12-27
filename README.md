@@ -6,6 +6,7 @@ Challenge Tipie
 
 Clone the repository and in the root folder and the frontend folder, do the following:
 
+```
 # Install dependencies
 
 npm install
@@ -13,3 +14,5 @@ npm install
 # Run the application
 
 npm start
+```
+
