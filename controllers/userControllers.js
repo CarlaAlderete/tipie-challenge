@@ -31,8 +31,5 @@ const userControllers = {
             res.json({success:false, res:err.message})
         }
     },
-    forcedSignIn:(req,res)=>{
-        res.json({...req})
-    },
 }
 module.exports = userControllers

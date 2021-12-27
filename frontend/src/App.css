@@ -3,16 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+#root{
+  background-image: linear-gradient(to right, #60163b80, #56123580, #4d0f2f80,#460c2b80, #3e092680);
+}
 input, .mainSign div{
   border-radius: 22px;
 }
-.mainSign, .mainHome{
-  min-height: 100vh;
+header{
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
 }
-.mainSign{
-  background-image: linear-gradient(to right, #5e153a, #561235, #4e0f30, #460c2b, #3e0926);
+header div{
+  height: 10vh;
+  width: 10vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#root, .mainSign, .mainHome{
+  display: flex;
+}
+#root{
+  flex-direction: column;
+  min-height: 100vh;
+}
+.mainSign, .mainHome{
+  align-items: center;
+  flex:1
 }
 .mainSign >div{
   width: 35vw;
@@ -52,8 +69,11 @@ input[type='submit'],thead{
 .mainHome{
   justify-content: center;
 }
-table{
+.mainHome > div{
   width: 85%;
+}
+table{
+  width: 100%;
   text-align: center;
   border-collapse: collapse;
 }
@@ -61,7 +81,25 @@ td, th{
   border: 2px solid #5e153a;
   padding: .5vw;
 }
-.icon{
-  display: flex;
-  flex-direction: column;
+td{
+  background-color:#ffffffde;
+}
+footer{
+  text-align: center;
+  padding-bottom: .5vh;
+}
+@media screen and (max-width: 900px){
+  header div{
+    height: 15vh;
+    width: 30vw;
+  }
+  .mainSign >div{
+    width: 60%;
+  }
+  .error{
+    height: 3.5vw;
+  }
+  .mainHome > div{
+    width: 95%;
+  }
 }

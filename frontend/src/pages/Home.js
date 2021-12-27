@@ -26,7 +26,7 @@ const Home = ()=>{
             </tr>
         )
     })
-    console.log(data)
+
     const sortHandler = (params)=>{
         let auxData = [...data]
         if(action[params] === 'asc'){
@@ -42,21 +42,25 @@ const Home = ()=>{
             setData(dataCopie)
         }   
     }
+
     return(
         <div className='mainHome'>
-            <table>
-                <thead>
-                    <tr>
-                        <th onClick={(e)=>sortHandler('name')}>Name <i className="fas fa-sort"></i></th>
-                        <th onClick={(e)=>sortHandler('sector')}>Sector <i className="fas fa-sort"></i></th>
-                        <th onClick={(e)=>sortHandler('age')}>Age <i className="fas fa-sort"></i></th>
-                        <th onClick={(e)=>sortHandler('email')}>E-mail <i className="fas fa-sort"></i></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tbody}
-                </tbody>
-            </table>
+            <div>
+                <h3>Information:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th onClick={()=>sortHandler('name')}>Name <i className="fas fa-sort"></i></th>
+                            <th onClick={()=>sortHandler('sector')}>Sector <i className="fas fa-sort"></i></th>
+                            <th onClick={()=>sortHandler('age')}>Age <i className="fas fa-sort"></i></th>
+                            <th onClick={()=>sortHandler('email')}>E-mail <i className="fas fa-sort"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {tbody}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }
