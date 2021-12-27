@@ -1,6 +1,7 @@
 ## About
 
-Challenge Tipie
+Challenge Tipie - Simple web application that contains a Login screen
+and a Home page that shows in a table the information brought from an API.
 
 ## Installation
 
