@@ -3,3 +3,65 @@
   padding: 0;
   box-sizing: border-box;
 }
+input, .mainSign div{
+  border-radius: 22px;
+}
+.mainSign, .mainHome{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.mainSign{
+  background-image: linear-gradient(to right, #5e153a, #561235, #4e0f30, #460c2b, #3e0926);
+}
+.mainSign >div{
+  width: 35vw;
+  background-color: #e4e2e269;
+  margin: 10vw;
+  padding: 2vw;
+  border: 1px solid #d9d9d93b;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainSign h2{
+  font-family: 'Courgette', cursive;
+  color: #f4a30e;
+}
+input{
+  margin:.5vw;
+  padding: .5vw 1vw;
+  width: 90%;
+  border: 1px solid #f4a30e;
+  outline: none;
+}
+input[type='submit'],thead{
+  background-color: #f4a30e;
+  cursor: pointer;
+}
+.error{
+  height: 2vw;
+}
+.error{
+  padding: .5vw;
+  font-size: medium;
+  color:rgb(201, 9, 9)
+}
+.mainHome{
+  justify-content: center;
+}
+table{
+  width: 85%;
+  text-align: center;
+  border-collapse: collapse;
+}
+td, th{
+  border: 2px solid #5e153a;
+  padding: .5vw;
+}
+.icon{
+  display: flex;
+  flex-direction: column;
+}
